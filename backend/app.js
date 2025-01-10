@@ -36,7 +36,7 @@ const PageNotFound = require("./errorHandler/PageNotFound");
 // app.use(cors())
 
 // For recieiving httpOnly cookies
-app.use(cors({ credentials: true }));
+app.use(cors());
 
 app.use(cookieParser());
 
