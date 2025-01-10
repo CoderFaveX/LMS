@@ -7,7 +7,7 @@ import "bootstrap/dist/js/bootstrap.js";
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
-export const backend_server = 'https://raw.githubusercontent.com/CoderFaveX/LMS/refs/heads/main/uploads/';
+export const backend_server = `http://localhost:5000`;
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App></App>);
 // <React.StrictMode>

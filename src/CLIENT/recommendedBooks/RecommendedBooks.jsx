@@ -15,6 +15,7 @@ const RecommendedBooks = () => {
       const response = await axios.get(RECOMMENDED_BOOK_API)
 
       const fetchedBooks = await response.data.data
+      console.log("aasa", fetchedBooks)
 
       setLatestBooks(fetchedBooks)
     } catch (error) {
@@ -39,9 +40,9 @@ const RecommendedBooks = () => {
 
           <div className='row mb-3'>
             {latestBooks.length > 0 ? (
-              latestBooks.map((book) => {
+              latestBooks.map(async (book) => {
                 const { _id, title, image, author, available } = book
-                const imgSrc = `${backend_server}/${image}.jpg`
+                const imgSrc = `https://raw.githubusercontent.com/CoderFaveX/LMS/refs/heads/main/${image}.jpg`
 
                 return (
                   <div
